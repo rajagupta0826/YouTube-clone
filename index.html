@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="top-navbar">
+    <div class="logo">YouTube</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." />
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="nav-icons">
+      <a href="upload.html"><i class="fas fa-video"></i></a>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+
+  <!-- Video Section -->
+  <main class="videos-section">
+    
+    <!-- Video 1 -->
+    <a class="video-card" href="watch.html?id=0">
+      <img src="video1.jpg" alt="Thumbnail 1" />
+      <div class="video-info">
+        <img class="channel-pic" src="chanel.jpg" alt="Channel" />
+        <div>
+          <h4>अब तू सतावल छोड़ द</h4>
+          <p>1M views · 3 days ago</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- Video 2 -->
+    <a class="video-card" href="watch.html?id=1">
+      <img src="videoi2.jpg" alt="Thumbnail 2" />
+      <div class="video-info">
+        <img class="channel-pic" src="chanel.jpg" alt="Channel" />
+        <div>
+          <h4>एगो रे सनमुआ</h4>
+          <p>500K views · 1 week ago</p>
+        </div>
+      </div>
+    </a>
+
+  </main>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-nav">
+    <button><i class="fas fa-home"></i><span>Home</span></button>
+    <button><i class="fas fa-bolt"></i><span>Shorts</span></button>
+    <a href="upload.html"><button class="upload-button"><i class="fas fa-plus-circle"></i></button></a>
+    <button><i class="fas fa-video"></i><span>Subscriptions</span></button>
+    <button><i class="fas fa-user"></i><span>You</span></button>
+  </nav>
+
+  <script>
+    // Hardcoded video data for watch.html demo
+    const demoVideos = [
+      {
+        title: "अब तू सतावल छोड़ द",
+        videoUrl: "kheshari.mp4",
+      },
+      {
+        title: "एगो रे सनमुआ",
+        videoUrl: "neelkamal.mp4",
+      }
+    ];
+    localStorage.setItem("videos", JSON.stringify(demoVideos));
+  </script>
+
+</body>
+</html>
